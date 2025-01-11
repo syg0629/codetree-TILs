@@ -11,7 +11,7 @@ else if(o === "-"){
     answer += numA - numC
 }
 else if(o === "/"){
-    answer = Math.floor(numA / numC);
+    answer += Math.floor(numA / numC);
 }
 else if(o === "*"){
     answer += numA * numC
