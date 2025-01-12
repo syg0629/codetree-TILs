@@ -1,5 +1,5 @@
 const fs = require("fs")
-const [n,m] = fs.readFileSync(0).toString().trim().split(" ")
+const [n,m] = fs.readFileSync(0).toString().trim().split(" ").map(Number);
 
 let count = 0
 
@@ -13,12 +13,8 @@ const isPrime = (num) => {
     return true
 }
 
-const isEven = (num) => {
-    if((num.toString().split("").map(Number).reduce((a,b)=> a+b,0)%2===0)){
-        return true
-    }
-    return false
-}
+const isEven = (num) => num.toString().split("").map(Number).reduce((a, b) => a + b, 0) % 2 === 0;
+
 for(let i = n; i <= m; i++){
     if(isPrime(i) && isEven(i)){
         count++
