@@ -4,7 +4,7 @@ const [Y, M, D] = fs.readFileSync(0).toString().trim().split(" ").map(Number)
 const isValidDate = (year, month, day) => {
     const date = new Date(year, month -1, day)
     if(date.getFullYear() === year && date.getMonth() === month-1 && date.getDate() === day){
-        return findSeason(month - 1)
+        return findSeason(month)
     }
     return -1
 }
