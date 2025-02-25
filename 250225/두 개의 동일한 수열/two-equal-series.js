@@ -1,21 +1,25 @@
 const fs = require("fs")
 const input = fs.readFileSync(0).toString().trim().split("\n")
 // 수열 A
-const A = input[1].split(" ").map(Number)
+const A = input[1].trim().split(" ").map(Number).sort((a,b)=> a-b)
 // 수열 B
-const B = input[2].split(" ").map(Number)
+const B = input[2].trim().split(" ").map(Number).sort((a,b)=> a-b)
 
-if(A.length !== B.length) {
-    console.log("No")
-    return 
-}
+// if(Object.is(A,B)) {
+//     console.log("YES")
+// }
 
-for (let i = 0; i < A.length; i++) {
-    if(!(B.some((b) => b == A[i])) ) {
-        console.log("No")
-        return 
-    }
-}
+// if(A.length !== B.length) {
+//     console.log("No")
+//     return 
+// }
 
-console.log("Yes")
-// console.log(A.some((v, i) => v !== B[i]) ? "No" : "Yes")
+// for (let i = 0; i < A.length; i++) {
+//     if(!(B.some((b) => b == A[i])) ) {
+//         console.log("No")
+//         return 
+//     }
+// }
+
+// console.log("Yes")
+console.log(A.some((v, i) => v !== B[i]) ? "No" : "Yes")
