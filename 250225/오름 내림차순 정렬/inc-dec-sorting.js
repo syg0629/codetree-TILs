@@ -1,0 +1,5 @@
+const fs = require("fs")
+const [_, arr] = fs.readFileSync(0).toString().trim().split("\n")
+const ascendingArr = arr.split(" ").map(Number).sort((a,b)=> a-b)
+console.log(ascendingArr.join(" "))
+console.log(ascendingArr.reverse().join(" "))
