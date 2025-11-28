@@ -19,10 +19,10 @@ const heightSort = [...students].sort((a,b)=> {
 
 console.log("name")
 for(const x of nameSort){
-  console.log(x.name, x.height, x.weight)
+  console.log(x.name, x.height, x.weight.toFixed(1))
 }
 console.log()
 console.log("height")
 for(const x of heightSort){
-  console.log(x.name, x.height, x.weight)
+  console.log(x.name, x.height, x.weight.toFixed(1))
 }
