@@ -21,7 +21,7 @@ console.log("name")
 for(const x of nameSort){
   console.log(x.name, x.height, x.weight)
 }
-console.log("")
+console.log()
 console.log("height")
 for(const x of heightSort){
   console.log(x.name, x.height, x.weight)
