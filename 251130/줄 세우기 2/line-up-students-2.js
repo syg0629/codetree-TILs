@@ -5,7 +5,7 @@ const n = Number(input[0]);
 const studentInputs = [];
 for (let i = 1; i <= n; i++) {
     const [height, weight] = input[i].split(' ').map(Number);
-    studentInputs.push([height, weight, i]);
+    studentInputs.push([height, weight]);
 }
 
 studentInputs.sort((a,b)=> {
