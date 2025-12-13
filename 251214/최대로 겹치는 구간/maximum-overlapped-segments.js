@@ -10,7 +10,7 @@ for (let i = 1; i <= n; i++) {
 const map = new Map()
 
 for(const [from, to] of segments) {
-    for(let i = from; i <= to; i++){
+    for(let i = from; i < to; i++){
         map.set(i, (map.get(i)||0)+1)
     }
 }
