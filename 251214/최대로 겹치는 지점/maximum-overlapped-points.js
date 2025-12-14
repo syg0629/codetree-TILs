@@ -7,11 +7,11 @@ for (let i = 1; i <= n; i++) {
   segments.push(input[i].split(' ').map(Number));
 }
 
-const arr = new Array(100).fill(0)
+const map = new Map()
 for(const [from, to] of segments){
   for (let i = from; i <= to; i++) {
-    arr[i]++
+    map.set(i, (map.get(i)||0)+1)
   }
 }
 
-console.log(Math.max(...arr))
+console.log(Math.max(...map.values()))
